@@ -1,0 +1,251 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body{
+	background: url("ep_naturalblack.png") repeat-x;
+}
+
+/*=======fonts======*/
+/*==================*/
+
+@font-face{
+	src: url("4bff1fbb-b4bf-4d95-9c47-efcb14384e36.woff");
+	font-family:"4bff1fbb-b4bf-4d95-9c47-efcb14384e36";
+}
+
+@font-face{
+	src: url("7b262cb4-c7c7-4fbc-af3b-e5b3ed2b1a24.woff");
+	font-family:"7b262cb4-c7c7-4fbc-af3b-e5b3ed2b1a24";
+}
+
+
+
+
+/*==========nav======*/
+/*==================*/
+
+.nav{
+	width:60%;
+	height:2em;
+	margin:0 auto;
+	margin-top:15px;
+	font-family:"4bff1fbb-b4bf-4d95-9c47-efcb14384e36";
+	font-size:1.5em;
+	color:white;
+	letter-spacing:0.1em;
+}
+
+.github,
+.random{
+	width:50%;
+	float:left;
+	text-align:center;
+}
+
+.github a{
+	text-decoration:none;
+	color:rgba(255,252,0,1);
+}
+
+.random a{
+	text-decoration:none;
+	color:white;
+}
+
+
+
+
+/*==========wiki-text======*/
+/*========================*/
+
+.wiki-text{
+	clear:both;
+	width:100%;
+	text-align:center;
+	position:relative;
+	z-index:-1;
+	font-size:160px;
+	color:white;
+}
+
+.wiki-text::before{
+	content:"";
+	display:block;
+	width:40%;
+	height:1px;
+	margin:0 auto;
+	background:white;
+
+}
+
+.viewer{
+	font-family:"4bff1fbb-b4bf-4d95-9c47-efcb14384e36";
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	color:rgba(255,252,0,1);
+
+}
+
+.wiki{
+	font-family:"7b262cb4-c7c7-4fbc-af3b-e5b3ed2b1a24";
+	letter-spacing: .05em;
+}
+
+/*==========search======*/
+/*========================*/
+
+.search{
+	text-align:center;
+	position:relative;
+	margin-top:-70px;
+	background: rgb(34,34,34);
+}
+
+#search-input{
+	width:100%;
+	border:none;
+	font-size:4em;
+	padding:1.5em 1em;
+	padding-top:2em;
+	padding-left: 2em;
+	letter-spacing: 0.1em;
+	height:100px;
+	font-family:"4bff1fbb-b4bf-4d95-9c47-efcb14384e36";
+	color:rgba(255,252,0,1);
+
+}
+
+#search-input:focus{
+	outline:0;
+}
+
+#search-input:placeholder-shown{
+	font-weight: bold;
+}
+/*==========search-results======*/
+/*===============================*/
+
+
+.search-results{
+	width:100%;
+	min-height:80vh;
+	background: url("ep_naturalblack.png") repeat;
+	/*background:rgba(164,144,218,0.4);*/
+	padding-bottom:40px;
+	counter-reset: section;
+}
+
+#result-list li{
+	background:white;
+	width:60%;
+	margin:0 auto;
+	list-style:none;
+	padding: 20px;
+	margin-bottom:20px;
+	counter-increment: section;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#result-list li:nth-child(10){
+	margin-bottom:0px;
+}
+
+
+
+#result-list li a{
+	text-decoration:none;
+	color:black;
+	font-size: 1.5em;
+	font-family:"7b262cb4-c7c7-4fbc-af3b-e5b3ed2b1a24";
+}
+
+#result-list li p{
+	font-family:"4bff1fbb-b4bf-4d95-9c47-efcb14384e36";
+	font-size: 1.1em;
+	font-weight:bold;
+}
+
+#result-list li::before {
+  position: absolute;
+  margin-left: -100px;
+  content: counter(section);
+  display: inline-block;
+  line-height: 2rem;
+  color: white;
+  font-family:"7b262cb4-c7c7-4fbc-af3b-e5b3ed2b1a24";
+  font-size: 50px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.search-results{
+	padding-top:20px;
+}
+
+
+
+
+/*==========mediaquery======*/
+/*===============================*/
+
+@media only screen and (max-width:768px){
+
+	.wiki-text{
+		font-size:120px;
+	}
+	.search{
+		margin-top:-20px;
+	}
+
+	#result-list li{
+		width:80%;
+	}
+}
+
+
+@media only screen and (max-width:700px){
+
+	.wiki-text{
+		font-size:100px;
+	}
+
+
+	#result-list li{
+		width:90%;
+	}
+	#result-list li::before{
+		display:none;
+	}
+}
+
+
+@media only screen and (max-width:596px){
+
+	.wiki-text{
+		font-size:80px;
+	}
+
+	.search{
+		margin-top:-10px;
+	}
+
+}
+
+
+
+@media only screen and (max-width:468px){
+	.nav{
+		width:100%;
+		}
+	#result-list li{
+		width:100%;
+	}
+
+}
+
+
+
+
