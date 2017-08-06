@@ -191,6 +191,27 @@ body{
 /*==========mediaquery======*/
 /*===============================*/
 
+
+@media only screen and (max-width:932px){
+	.wiki-text{
+		font-size:130px;
+	}
+	.search{
+		margin-top:-50px;
+	}
+
+}
+
+@media only screen and (max-width:644px){
+
+	
+	#search-input{
+		font-size:3em;
+	}
+
+}
+
+
 @media only screen and (max-width:768px){
 
 	.wiki-text{
@@ -236,15 +257,57 @@ body{
 
 
 
-@media only screen and (max-width:468px){
-	.nav{
-		width:100%;
-		}
-	#result-list li{
-		width:100%;
+@media only screen and (max-width:472px){
+	
+	.wiki-text{
+		font-size:70px;
 	}
-
+	.nav{
+		font-size:1.1em;
+		}
+	#search-input{
+		font-size:2em;
+	}
 }
+
+
+@media only screen and (max-width:410px){
+	
+	.wiki-text{
+		font-size:60px;
+	}
+	.nav{
+		font-size:1.1em;
+		}
+	#search-input{
+		font-size:2em;
+	}
+}
+
+@media only screen and (max-width:350px){
+	
+	.wiki-text{
+		font-size:50px;
+	}
+	.nav{
+		font-size:0.9em;
+		}
+	.search{
+		margin-top:-5px;
+	}
+}
+
+@media only screen and (max-width:292px){
+	
+	.wiki-text{
+		font-size:40px;
+	}
+	#search-input{
+		font-size:1.5em;
+	}
+}
+
+
 
 
 
